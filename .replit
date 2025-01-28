@@ -60,7 +60,7 @@ pattern = "**/{*.less,*.scss,*.css}"
 start = "vscode-css-language-server --stdio"
 
 [deployment]
-run = ["sh", "-c", "echo Your website is running! Open the webview to see it."]
+run = ["sh", "-c", "npx serve -p 8080"]
 
 [[ports]]
 localPort = 8080
