@@ -1,7 +1,9 @@
 hidden=[".config"]
+modules = ["nodejs-20", "web", "nix"]
+run = "npx serve -p 8080"
 
 [nix]
-channel = "stable-21_11"
+channel = "stable-24_05"
 
 [languages.html]
 pattern = "**/*.html"
@@ -56,3 +58,10 @@ pattern = "**/{*.less,*.scss,*.css}"
 
 [languages.css.languageServer]
 start = "vscode-css-language-server --stdio"
+
+[deployment]
+run = ["sh", "-c", "echo Your website is running! Open the webview to see it."]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
